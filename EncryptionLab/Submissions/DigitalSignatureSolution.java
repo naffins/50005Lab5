@@ -56,8 +56,7 @@ public class DigitalSignatureSolution {
             encryptedDigests[i] = rsaEncryptCipher.doFinal(digests[i]);
 
             // print the encrypted message (in base64format String using Base64)
-            System.out.println("Encrypted digest for " + fileName[i] + ": " + Base64.getEncoder().encodeToString(encryptedDigests[i]));
-            System.out.println("Length of encrypted digest: " + encryptedDigests[i].length + "\n");
+            System.out.println("Encrypted digest for " + fileName[i] + ": " + Base64.getEncoder().encodeToString(encryptedDigests[i]) + "\n");
         }
         
         // Create RSA("RSA/ECB/PKCS1Padding") cipher object and initialize is as decrypt mode, use PUBLIC key.          
